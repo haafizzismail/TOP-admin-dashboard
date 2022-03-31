@@ -58,5 +58,6 @@ table {
     --font-google: 'Roboto', sans-serif;
 
     --br-normal: 8px;
-    --br-round: 20px;
+    --br-more: 20px;
+    --br-round: 50%;
 }
