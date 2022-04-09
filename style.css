@@ -1,6 +1,11 @@
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
+/*
+==================================
+CSS Reset
+==================================
+	
+http://meyerweb.com/eric/tools/css/reset/ 
+v2.0 | 20110126
+License: none (public domain)
 */
 
 html, body, div, span, applet, object, iframe,
@@ -47,12 +52,18 @@ table {
 	border-spacing: 0;
 }
 
-/* CSS Custom Properties */
+/*	
+================================
+Custom Properties
+================================
+*/
+
 :root {
     --primary-color: hsl(332, 22%, 38%);
     --secondary-color: hsl(179, 100%, 33%);
     --dark-color: black;
     --light-color: white;
+	--gray-color: rgb(212, 212, 212);
 
     --font-system: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
     --font-google: 'Roboto', sans-serif;
@@ -60,4 +71,130 @@ table {
     --br-normal: 8px;
     --br-more: 20px;
     --br-round: 50%;
+}
+
+/*	
+================================
+Custom Styles
+================================
+*/
+
+.profile-pic {
+	border-radius: var(--br-round);
+}
+
+button {
+	border-radius: var(--br-more);
+	background: var(--primary-color);
+	color: var(--light-color);
+	border: none;
+	width: 70px;
+	padding: 10px;
+}
+/*	
+================================
+Overall Layout
+================================
+*/
+
+body {
+	display: grid;
+	grid-template-columns: 200px 1fr;
+	grid-template-areas: 
+		"sidebar header"
+		"sidebar main";
+}
+
+header {
+	grid-area: header;
+}
+
+.sidebar {
+	grid-area: sidebar;
+}
+
+main {
+	grid-area: main;
+}
+
+/*	
+================================
+Header
+================================
+*/
+
+header {
+	background: var(--light-color);
+	display: grid;
+	grid-template-columns: 500px 1fr;
+	grid-template-rows: 50px 80px;
+}
+
+header form {
+	display: grid;
+	grid-template-columns: 30px 1fr;
+	padding: 13px;
+}
+
+label img {
+	width: 20px;
+}
+
+form input {
+	border-radius: var(--br-more);
+	border: none;
+	background: var(--gray-color);
+	padding: 0 5px;
+}
+
+.profile {
+	margin-left: 10px;
+	display: grid;
+	grid-template-columns: 50px 70px 130px;
+	place-items: center;
+}
+
+.profile .profile-pic {
+	width: 40px;
+}
+
+.welcome {
+	display: grid;
+	grid-template-columns: 1fr 4fr;
+	place-items: center;
+}
+
+.welcome-message {
+	justify-self: start;
+	display: grid;
+}
+.welcome .profile-pic {
+	width: 70px;
+}
+
+.header-buttons {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	place-items: center;
+}
+
+
+/*	
+================================
+Sidebar
+================================
+*/
+
+.sidebar {
+	background: var(--primary-color);
+}
+
+/*	
+================================
+Main
+================================
+*/
+
+main {
+	background: var(--gray-color);
 }

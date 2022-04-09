@@ -1,41 +1,124 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TOP Admin Dashboard</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700;900&display=swap" rel="stylesheet">
-</head>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>TOP Admin Dashboard</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700;900&display=swap" rel="stylesheet">
+    </head>
 
-<body>
-    <header>
-        <form action="#" method="GET">
-            <label for="search"><img src="images/search.png" alt="search icon" width="20px"></label>
-            <input type="search" id="search">
-        </form>
-        <div class="profile">
-            <img src="images/notification.png" alt="notification icon" width="20px">
-            <img src="images/twitterprofilepic.jpg" alt="profile photo" width="100px">
-            <span>Haafizz Ismail</span>
-        </div>
-        <div class="welcome">
-            <img src="images/twitterprofilepic.jpg" alt="profile photo" width="100px">
-            <div class="welcome-message">
-                <span>Hi there,</span>
-                <span>Haafizz Ismail (&#64;haafizzismail)</span>
+    <body>
+        <header>
+            <form action="#" method="get">
+                <label for="search"><img src="images/search.png" alt="search icon"></label>
+                <input type="search" id="search">
+            </form>
+            <div class="profile">
+                <img src="images/notification.png" alt="notification icon" width="20px">
+                <img class="profile-pic" src="images/twitterprofilepic.jpg" alt="profile photo" width="100px">
+                <span>Haafizz Ismail</span>
             </div>
-        </div>
-        <div class="header-buttons">
-            <button>New</button>
-            <button>Upload</button>
-            <button>Share</button>
-        </div>
-    </header>
-</body>
+            <div class="welcome">
+                <img class="profile-pic" src="images/twitterprofilepic.jpg" alt="profile photo" width="100px">
+                <div class="welcome-message">
+                    <span>Hi there,</span>
+                    <span>Haafizz Ismail (&#64;haafizzismail)</span>
+                </div>
+            </div>
+            <div class="header-buttons">
+                <button>New</button>
+                <button>Upload</button>
+                <button>Share</button>
+            </div>
+        </header>
+        <section class="sidebar">
+            <span>Dashboard</span>
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Profile</a></li>
+                    <li><a href="#">Messages</a></li>
+                    <li><a href="#">History</a></li>
+                    <li><a href="#">Tasks</a></li>
+                    <li><a href="#">Communities</a></li>
+                </ul>
+                <ul>
+                    <li><a href="#">Settings</a></li>
+                    <li><a href="#">Support</a></li>
+                    <li><a href="#">Privacy</a></li>
+                </ul>
+            </nav>
+        </section>
+        <main>
+            <div>
+                <h3>Your Projects</h3>
+                <div>
+                    <h5>Super Cool Project</h5>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, ut!</p>
+                </div>
+                <div>
+                    <h5>Less Cool Project</h5>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, ut!</p>
+                </div>
+                <div>
+                    <h5>Impossible App</h5>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, ut!</p>
+                </div>
+                <div>
+                    <h5>Easy Peasy App</h5>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, ut!</p>
+                </div>
+                <div>
+                    <h5>Ad Blocker</h5>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, ut!</p>
+                </div>
+                <div>
+                    <h5>Money Maker</h5>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, ut!</p>
+                </div>
+            </div>
+            <div>
+                <h3>Announcements</h3>
+                <div>
+                    <div>
+                        <h6>Site Maintenance</h6>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, veritatis?</p>
+                    </div>
+                    <div>
+                        <h6>Community Share Day</h6>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, veritatis?</p>
+                    </div>
+                    <div>
+                        <h6>Updated Privacy Policy</h6>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, veritatis?</p>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <h3>Trending</h3>
+                <div>
+                    <a href="#">@tegan</a>
+                    <span>World Peace Builder</span>
+                </div>
+                <div>
+                    <a href="#">@morgan</a>
+                    <span>Super Cool Project</span>
+                </div>
+                <div>
+                    <a href="#">@kendall</a>
+                    <span>Life Changing App</span>
+                </div>
+                <div>
+                    <a href="#">@alex</a>
+                    <span>No Traffic Maker</span>
+                </div>
+            </div>
+        </main>
+    </body>
 
 </html>
