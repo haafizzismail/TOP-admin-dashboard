@@ -91,6 +91,26 @@ button {
 	width: 70px;
 	padding: 10px;
 }
+
+
+/*	
+================================
+Typography
+================================
+*/
+body {
+	font-family: var(--font-google);
+}
+
+h3,
+h5,
+h6 {
+	font-weight: 700;
+}
+
+.announcements div {
+	font-size: .9rem;
+}
 /*	
 ================================
 Overall Layout
@@ -187,8 +207,32 @@ Sidebar
 
 .sidebar {
 	background: var(--primary-color);
+	display: grid;
+	grid-template-rows: 50px 1fr;
+	padding: 20px;
 }
 
+.sidebar span {
+	align-self: center;
+	font-size: 1.5rem;
+	font-weight: 700;
+	color: var(--light-color);
+}
+
+.sidebar nav {
+	line-height: 2.6rem;
+	margin-top: 20px;
+}
+
+.sidebar-links li a {
+	text-decoration: none;
+	color: var(--light-color);
+	font-size: 1.1rem;
+}
+
+.sidebar-links li:nth-child(7) {
+	margin-top: 30px;
+}
 /*	
 ================================
 Main
@@ -197,4 +241,84 @@ Main
 
 main {
 	background: var(--gray-color);
+	display: grid;
+	grid-template-columns: 1fr 300px;
+	grid-template-rows: repeat(2, 1fr);
+	grid-template-areas:
+		"projects announcements"
+		"projects trending"
+}
+
+.projects {
+	grid-area: projects;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: 30px 1fr;
+}
+
+.projects h3 {
+	grid-column: 1 / 3;
+	align-self: end;
+	padding-left: 10px;
+}
+
+.projects div {
+	width: 300px;
+	height: 150px;
+	background: var(--light-color);
+	border-left: 8px solid var(--secondary-color);
+	border-radius: var(--br-normal);
+	place-self: center;
+	margin: 10px;
+	padding: 20px 10px;
+}
+
+.announcements {
+	grid-area: announcements;
+	display: grid;
+	grid-template-rows: 30px 1fr;
+}
+
+.announcements h3 {
+	align-self: end;
+	padding-left: 10px;
+}
+
+.announcements div {
+	background: var(--light-color);
+	border-radius: var(--br-normal);
+	margin-top: 10px;
+	margin-left: 10px;
+	margin-right: 20px;
+	margin-bottom: 10px;
+}
+
+.announcements div div {
+	border-bottom: 1px solid var(--gray-color);
+	border-radius: 0;
+	padding-bottom: 15px;
+}
+
+.announcements div div:last-child {
+	border-bottom: none;
+}
+.trending {
+	grid-area: trending;
+	display: grid;
+	grid-template-rows: 30px 1fr;
+}
+
+.trending h3 {
+	align-self: end;
+	padding-left: 10px;
+}
+
+.trending div {
+	background: var(--light-color);
+	border-radius: var(--br-normal);
+	margin: 10px;
+}
+
+.trending div a {
+	display: block;
 }
