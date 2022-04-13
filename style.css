@@ -59,8 +59,8 @@ Custom Properties
 */
 
 :root {
-    --primary-color: hsl(332, 22%, 38%);
-    --secondary-color: hsl(179, 100%, 33%);
+    --primary-color: hsl(226, 64%, 29%);
+    --secondary-color: hsla(0, 76%, 55%, 0.623);
     --dark-color: black;
     --light-color: white;
 	--gray-color: rgb(212, 212, 212);
@@ -119,7 +119,7 @@ Overall Layout
 
 body {
 	display: grid;
-	grid-template-columns: 200px 1fr;
+	grid-template-columns: 1fr 4fr;
 	grid-template-areas: 
 		"sidebar header"
 		"sidebar main";
@@ -146,18 +146,22 @@ Header
 header {
 	background: var(--light-color);
 	display: grid;
-	grid-template-columns: 500px 1fr;
-	grid-template-rows: 50px 80px;
+	grid-template-columns: 2fr 1fr;
+	padding-bottom: 1rem;
 }
 
 header form {
 	display: grid;
-	grid-template-columns: 30px 1fr;
-	padding: 13px;
+	grid-template-columns: .4fr 3fr;
+	padding: 13px 0;
+}
+
+label {
+	justify-self: center;
 }
 
 label img {
-	width: 20px;
+	width: 20px;;
 }
 
 form input {
@@ -168,10 +172,11 @@ form input {
 }
 
 .profile {
-	margin-left: 10px;
 	display: grid;
-	grid-template-columns: 50px 70px 130px;
+	width: 14rem;
+	grid-template-columns: repeat(3, auto);
 	place-items: center;
+	justify-self: center;
 }
 
 .profile .profile-pic {
@@ -182,7 +187,7 @@ form input {
 
 .welcome {
 	display: grid;
-	grid-template-columns: 1fr 4fr;
+	grid-template-columns: 1fr 5fr;
 	place-items: center;
 }
 
@@ -190,6 +195,7 @@ form input {
 	justify-self: start;
 	display: grid;
 }
+
 .welcome .profile-pic {
 	width: 70px;
 	height: 70px;
@@ -198,8 +204,10 @@ form input {
 
 .header-buttons {
 	display: grid;
-	grid-template-columns: repeat(3, 1fr);
+	width: 19rem;
+	grid-template-columns: repeat(3, auto);
 	place-items: center;
+	justify-self: center;
 }
 
 
@@ -246,88 +254,88 @@ Main
 main {
 	background: var(--gray-color);
 	display: grid;
-	grid-template-columns: 1fr 300px;
-	grid-template-rows: repeat(2, 1fr);
-	grid-template-areas:
-		"projects announcements"
-		"projects trending"
+	grid-template-columns: 3fr 1fr;
+	padding: 1rem;
 }
 
 .projects {
-	grid-area: projects;
 	display: grid;
-	grid-template-columns: repeat(2, 1fr);
-	grid-template-rows: 30px 1fr;
-	gap: 10px;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	grid-template-rows: auto 1fr 1fr;
+	grid-auto-rows: 1fr;
 }
 
 .projects h3 {
-	grid-column: 1 / 3;
+	grid-column: 1 / -1;
 	align-self: end;
-	padding-left: 10px;
+	margin-bottom: .3rem;
 }
 
 .projects div {
-	min-width: 300px;
-	height: 150px;
+	min-height: 10rem;
 	background: var(--light-color);
-	border-left: 8px solid var(--secondary-color);
+	border-left: 10px solid var(--secondary-color);
 	border-radius: var(--br-normal);
-	place-self: center;
 	padding: 20px 10px;
+	margin-right: 1rem;
+	margin-bottom: 1rem;
+}
+
+aside {
+	display: grid;
+	grid-template-rows: 1fr 1fr;
 }
 
 .announcements {
-	grid-area: announcements;
 	display: grid;
-	grid-template-rows: 30px 1fr;
+	grid-template-rows: auto 1fr;
 }
 
-.announcements h3 {
+ .announcements h3 {
 	align-self: end;
-	padding-left: 10px;
+	margin-bottom: .3rem;
 }
 
-.announcements div {
+.announcements > div {
 	background: var(--light-color);
 	border-radius: var(--br-normal);
-	margin-top: 10px;
-	margin-left: 10px;
-	margin-right: 20px;
-	margin-bottom: 10px;
+	display: grid;
+	grid-template-rows: 1fr 1fr 1fr;
+	place-items: center;
+	padding-top: 1rem;
 }
 
-.announcements div div {
+.announcements > div > div {
 	border-bottom: 1px solid var(--gray-color);
 	border-radius: 0;
 	padding-bottom: 15px;
+	width: 80%;
+	line-height: 1.2rem;
 }
 
 .announcements div div:last-child {
 	border-bottom: none;
 }
+
 .trending {
-	grid-area: trending;
 	display: grid;
-	grid-template-rows: 30px 1fr;
+	grid-template-rows: auto 1fr;
+	margin-top: 2rem;
+	margin-bottom: 1rem;
 }
 
 .trending h3 {
 	align-self: end;
-	padding-left: 10px;
+	margin-bottom: .3rem;
 }
 
 .trending > div {
 	background: var(--light-color);
 	border-radius: var(--br-normal);
-	margin: 10px;
 	display: grid;
-	grid-template-columns: auto auto;
+	grid-template-columns: 1fr 2fr;
 	place-items: center;
-}
-
-.trending div a {
-	display: block;
+	padding: 20px 10px;
 }
 
 .trending img {
@@ -336,6 +344,10 @@ main {
 	object-fit: cover;
 }
 
-.trending div div {
+.trending div a {
+	display: block;
+}
+
+.trending > div > div {
 	justify-self: start;
 }
