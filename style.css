@@ -147,7 +147,7 @@ header {
 	background: var(--light-color);
 	display: grid;
 	grid-template-columns: 2fr 1fr;
-	padding-bottom: 1rem;
+	padding: 1rem 0;
 }
 
 header form {
@@ -157,11 +157,11 @@ header form {
 }
 
 label {
-	justify-self: center;
+	place-self: center;
 }
 
 label img {
-	width: 20px;;
+	width: 20px;
 }
 
 form input {
@@ -196,6 +196,11 @@ form input {
 	display: grid;
 }
 
+.welcome-message span:nth-child(2) {
+	font-weight: 700;
+	font-size: 1.6rem;
+	margin-top: 0.5rem;
+}
 .welcome .profile-pic {
 	width: 70px;
 	height: 70px;
@@ -229,6 +234,9 @@ Sidebar
 	font-size: 1.5rem;
 	font-weight: 700;
 	color: var(--light-color);
+	display: grid;
+	grid-template-columns: 1fr 4fr;
+	align-items: center;
 }
 
 .sidebar nav {
@@ -245,6 +253,22 @@ Sidebar
 .sidebar-links li:nth-child(7) {
 	margin-top: 30px;
 }
+
+.sidebar span img {
+	width: 2rem;
+	place-self: center;
+}
+
+.sidebar-links li a {
+	display: grid;
+	grid-template-columns: 1fr 4fr;
+	align-items: center;
+}
+
+.icons {
+	width: 1.2rem;
+	place-self: center;
+}
 /*	
 ================================
 Main
@@ -256,6 +280,7 @@ main {
 	display: grid;
 	grid-template-columns: 3fr 1fr;
 	padding: 1rem;
+	padding-top: 2rem;
 }
 
 .projects {
