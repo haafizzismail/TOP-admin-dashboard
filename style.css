@@ -281,6 +281,12 @@ main {
 	margin-bottom: 1rem;
 }
 
+/*	
+================================
+Main - Aside
+================================
+*/
+
 aside {
 	display: grid;
 	grid-template-rows: 1fr 1fr;
@@ -333,9 +339,9 @@ aside {
 	background: var(--light-color);
 	border-radius: var(--br-normal);
 	display: grid;
-	grid-template-columns: 1fr 2fr;
+	grid-template-rows: repeat(4, 1fr);
 	place-items: center;
-	padding: 20px 10px;
+	padding: 1rem 1rem;
 }
 
 .trending img {
@@ -349,5 +355,17 @@ aside {
 }
 
 .trending > div > div {
+	display: grid;
+	grid-template-columns: 1fr 4fr;
+	place-items: center;
+	padding-bottom: 1rem;
+}
+
+.trending > div > div:last-child {
+	padding-bottom: 0;
+}
+
+.profile-pic + div {
 	justify-self: start;
+	padding-left: 1rem;
 }
